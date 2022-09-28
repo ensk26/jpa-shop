@@ -2,6 +2,7 @@ package study.shop.domain;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import study.shop.domain.item.Item;
 
 import javax.persistence.*;
 

@@ -1,17 +1,16 @@
-package study.shop.domain;
+package study.shop.domain.item;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @NoArgsConstructor
-public class Item {
+@DiscriminatorColumn
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Item {
 
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")
